@@ -14,7 +14,7 @@
 
 《納品物一式》
 1）設計書　：下記に記載。
-https://docs.google.com/spreadsheets/d/1qV9QxWI2kPopBDcb6K3vR9G3MuDHR0vIN9gajeU7gAs/edit#gid=0
+https://docs.google.com/spreadsheets/d/1g-Q1iyC6-47U-fGUwgl12wZMCMTD4sKHMNnxVokKDBE/edit#gid=501582612
 
 
 《動作確認上の前提事項》
@@ -40,9 +40,9 @@ https://docs.google.com/spreadsheets/d/1qV9QxWI2kPopBDcb6K3vR9G3MuDHR0vIN9gajeU7
 《セットアップおよび初期設定》
 1）localhostと直結したフォルダー「htdocs」の配下に、フォルダー「links」を新規作成する。
 
-2）当システムのすべてのファイルを、1）で作成したフォルダー「links」の直下におく。
+2）当システムのすべてのファイル（フォルダー「user」一式も含む）を、1）で作成したフォルダー「links」の直下におく。
 
-3）フォルダー「links」配下のフォルダー「user」内のファイル「cst_php.php」を、エディタで開き、その記述にしたがって、データベースの情報を使用する環境の情報に変更する。
+3）フォルダー「links」配下のフォルダー「user」内のファイル「cst_php.php」をエディタで開き、その記述にしたがって、データベースの情報を使用する環境の情報に変更する。
 
 4）注釈の記述を参考に、各変数の値を、実際に使用するデータベースにあわせて変更する。
 

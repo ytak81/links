@@ -6,35 +6,33 @@
 
   $post = sanitize($_POST);
 
-  try {
-    require_once("user/cst_php.php");
-    $dbh =  dbConnect($dbname,$dbhost,$user,$password);
-
-    if (empty($post)) {
-      echo "<a href='".$mainpage."'>こちらのページ</a>からどうぞ";
+  if (empty($post)) {
+    echo "<a href='".$mainpage."'>こちらのページ</a>からどうぞ";
+    exit();
+  } else {
+    //名前入力判定
+    if ($post['code'] === "") {
+      $err_message = "システムエラー発生：レコード無し";
+      chk_back($err_message);
       exit();
     } else {
-      //名前入力判定
-      if ($post['code'] === "") {
-        $err_message = "システムエラー発生：レコード無し";
-        chk_back($err_message);
-        exit();
-      } else {
+      try {
+        require_once("user/cst_php.php");
+        $dbh =  dbConnect($dbname,$dbhost,$user,$password);
         // レコードを削除
         $sql = "DELETE FROM pages WHERE code=?";
         $stmt = $dbh->prepare($sql);
         $data = [];
         $data[] = $post['code'];
         $stmt->execute($data);
+        // データベース切断
+        $dbh = null;
+      }
+      catch (Exception $e) {
+        dberror($e);
+        exit();
       }
     }
-    // データベース切断
-    $dbh = null;
-  }
-
-  catch (Exception $e) {
-    dberror($e);
-    exit();
   }
 ?>
 <!DOCTYPE html>

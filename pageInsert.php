@@ -6,17 +6,17 @@
 
   $post = sanitize($_POST);
 
-  try {
-    require_once("user/cst_php.php");
-    $dbh =  dbConnect($dbname,$dbhost,$user,$password);
-    
-    if (empty($post)) {
-      echo "<a href='".$mainpage."'>こちらのページ</a>からどうぞ";
+  if (empty($post)) {
+    echo "<a href='".$mainpage."'>こちらのページ</a>からどうぞ";
+  } else {
+    //名前入力判定
+    if (($post['grp'] === "") || ($post['seqingrp'] === "")) {
+      echo "入力必須項目の中に、未入力項目があります。";
+      exit();        
     } else {
-      //名前入力判定
-      if (($post['grp'] === "") || ($post['seqingrp'] === "")) {
-        echo "入力必須項目の中に、未入力項目があります。";
-      } else {
+      try {
+        require_once("user/cst_php.php");
+        $dbh =  dbConnect($dbname,$dbhost,$user,$password);
         // レコードを追加
         $sql = "INSERT INTO pages (grp,seqingrp,url,dt,dd) VALUES (?,?,?,?,?)";
         $stmt = $dbh->prepare($sql);
@@ -27,15 +27,14 @@
         $data[] = $post['dt'];
         $data[] = $post['dd'];
         $stmt->execute($data);
+        // データベース切断
+        $dbh = null;
       }
+      catch (Exception $e) {
+        dberror($e);
+        exit();
+      }    
     }
-    // データベース切断
-    $dbh = null;
-  }
-
-  catch (Exception $e) {
-    dberror($e);
-    exit();
   }
 ?>
 <!DOCTYPE html>
