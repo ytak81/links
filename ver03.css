@@ -1,0 +1,123 @@
+@import url("user/cst_style.css");
+* {
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+}
+header {
+  width : 100vw; height: 150px;
+  margin-bottom: 16px;
+  background-image: var(--header-image);
+  background-repeat: repeat;
+  z-index: 999; 
+}
+#form1 {
+  display: none;
+  position: absolute; top: 0; right: 0px;
+  width: 600px; margin: 0;
+  background-color: darksalmon;
+  z-index: 5000;
+}
+
+#sub1 {
+  position: relative;
+  float : left; 
+  width : 20%;
+  box-sizing : border-box
+}
+#settings {
+  background-color: #ee8de9;
+}
+
+#sub1 p {
+  font-family : 'MS　P明朝','MS　PMincho','ヒラギノ明朝 Pro W3','Hiragino Mincho Pro',serif;
+}
+
+#mains {  
+  position: relative;
+  float : left;
+  width : 60%;
+  padding : 0 0 50px;
+  background-color: yellow;
+}
+
+#sub2 {
+  position: relative;
+  float : right;
+  width : 20%;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  clear : both;
+  width : 100vw;  
+  height : 30px; 
+  background-color: #eeeeee;   
+}
+
+h1 {
+  color : white;
+}
+
+h5 {
+  margin: 30px 10px 0;
+  text-align: right;
+  color: lightgreen;
+}
+
+h2 {
+  padding: 20px 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3 {
+  margin: 40px 20px 0; 
+}
+
+dl {
+  display: none;
+  position: relative;
+}
+
+dt {
+  margin: 0 75px 0 20px;
+}
+
+dd {
+  text-align: center;
+  display: none;
+/* border-color: black; 
+  border-width: 0 1px 1px 1px; 
+  border-style: solid; */
+  margin: 0 75px 0 20px;
+  background-color: white;
+}
+#op80 {
+  display: block;
+}
+
+h4 {
+  margin: 0 0 0 10px;
+}
+
+h6 {
+  text-align: center; 
+  padding-top: 16px;
+}
+
+em {
+  text-decoration: underline;
+}
+
+.btnL {
+  float: left;
+  margin: 20px 10px 0px; 
+  height: 20px;
+  width: 150px;
+  font-size: 10px;
+  background-color: blue;
+  color: white;
+}

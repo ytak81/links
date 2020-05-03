@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+:root {
+  /* ヘッダの背景画像・・・お好みの画像に差し替えることができます。
+    1)ローカルホスト環境のフォルダー(htdocs)内に「user」という名前のフォルダーがあることを確認します。
+    2)フォルダー「user」の中に、お好みの画像ファイルを保存します。
+    3)2）で保存した画像の名前を、下記（11行目）の'user/'の直後にある初期値の箇所に上書きします。
+
+  /* ヘッダの背景画像　（初期値：headerSample.png）
+  --header-image: url("user/headerSample.png"); */
+  --header-image: url("user/headerSample.png");
+}

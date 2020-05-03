@@ -1,0 +1,146 @@
+@charset "utf-8";
+* {
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+}
+.headerg {
+  padding: 10px 30px 10px;
+  background-color: #a7d28d;
+}
+.headerp {
+  padding: 10px 30px 10px;
+  background-color: #fcdd5f;
+}
+nav {
+  position: fixed;
+  z-index: 9999;
+  right: 50px;
+  display: flex;
+}
+.btnS {
+  background-color: magenta;
+  color: white;
+}
+
+main {
+  clear: both;
+  position: relative;
+  margin: 70px 0px; 
+  padding: 0 3vw;
+}
+.widespace {
+  margin: 0px 0px; 
+  padding: 0 0;
+}
+
+td {
+  border: solid 1px #000000;
+  border-collapse: separate;
+}
+.fontSmall {
+  font-size: small;
+}
+.caldate {
+  background-color: yellow;
+  border: black solid 1px;
+}
+.caldate2 {
+  background-color: lightcyan;
+  border: black solid 1px;
+}
+.caldate3 {
+  background-color: papayawhip;
+  border: black solid 1px;
+}
+.btnL {
+  float: left;
+  height: 20px;
+  width: 150px;
+  font-size: 10px;
+  background-color: blue;
+  color: white;
+}
+.btnR {
+  float: right;
+  height: 20px;
+  width: 150px;
+  font-size: 10px;
+  background-color: red;
+  color: white;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  clear : both;
+  width : 100vw;  
+  height : 30px; 
+  background-color: #eeeeee;   
+}
+footer h6 {
+  text-align: center; 
+  padding-top: 10px;
+}
+  
+/* iPhone 縦 */
+
+@media screen and (min-width:480px) { 
+  /*　for iPhone Landscape　(iPhone 横)　*/
+
+  main {
+    padding: 0 5vw;
+  }
+
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  /*　for iPad 　*/
+
+  main {
+    padding: 0 10vw;
+  }
+  .btnL {
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+  }
+  .btnR {
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+  }
+  .btnY {
+    height: 36px;
+    width: 300px;
+    font-size: 20px;
+  }
+
+}
+@media screen and (min-width:1024px) {
+  /*　for PC　*/
+
+  main {
+    padding: 0 20vw;
+  }
+  .btnS {
+    height: 40px;
+    width: 150px;
+    padding: 5px 0 0 0;
+    font-size: 20px;
+    background-color: magenta;
+    color: white;
+  }
+  .btnL {
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+  }
+  .btnR {
+    height: 40px;
+    width: 300px;
+    font-size: 20px;
+  }
+
+}
